@@ -141,6 +141,21 @@ cursor:pointer;
 transition:.3s;
 }
 
+.music-btn{
+margin-top:20px;
+padding:14px 28px;
+border:none;
+border-radius:50px;
+background:#e91e63;
+color:white;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
 .open-btn:hover{
 transform:scale(1.08);
 }
@@ -311,11 +326,7 @@ font-size;1.2rem;
 }
 
 audio{
-display:block;
-position:fixed;
-bottom:20px;
-left:20px;
-z-index:9999;
+display:none;
 }
 
 /* MOBILE */
@@ -347,7 +358,7 @@ font-size:1.3rem;
 </head>
 <body>
 
-<audio autoplay loop controls>
+<audio id="music" loop>
 <source src="kattu-mooliyo.mp3" type="audio/mpeg">
 </audio>
 
@@ -372,6 +383,11 @@ font-size:1.3rem;
 <p class="quote">
 "In a sky crowded with stars, you remain the only moon that I see."
 </p>
+
+<button class="music-btn"
+onclick="document.getElementById('music').play()">
+🎵 Play Birthday Song
+</button>
 
 <button class="open-btn"
 onclick="document.getElementById('envelope').classList.toggle('show')">
